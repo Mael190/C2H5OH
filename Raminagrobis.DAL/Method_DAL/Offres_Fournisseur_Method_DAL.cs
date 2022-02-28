@@ -39,9 +39,9 @@ namespace Raminagrobis.DAL
             {
                 var offres_fournisseurTmp = new Offres_Fournisseurs_DAL(
                                         reader.GetInt32(0),
-                                        reader.GetString(1),
-                                        reader.GetInt32(3),
-                                        reader.GetInt32(4)
+                                        reader.GetDouble(1),
+                                        reader.GetInt32(2),
+                                        reader.GetInt32(3)
                                         );
 
                 listeOffres_Fournisseur.Add(offres_fournisseurTmp);
@@ -63,7 +63,7 @@ namespace Raminagrobis.DAL
             {
                 var offres_fournisseurs = new Offres_Fournisseurs_DAL(
                                         reader.GetInt32(0),
-                                        reader.GetString(1),
+                                        reader.GetDouble(1),
                                         reader.GetInt32(3),
                                         reader.GetInt32(4)
                                         );

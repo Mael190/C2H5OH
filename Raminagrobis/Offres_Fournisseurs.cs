@@ -15,8 +15,8 @@ namespace Raminagrobis
             get { return id_fournisseurs; }
             private set { id_fournisseurs = value; }
         }
-        private string offres;
-        public string OFFRES
+        private double offres;
+        public double OFFRES
         {
             get { return offres; }
             private set { offres = value; }
@@ -30,13 +30,13 @@ namespace Raminagrobis
 
         public int ID { get; set; }
 
-        public Offres_Fournisseurs(string offres,int id_fournisseurs, int id_panier_globals_details)
+        public Offres_Fournisseurs(double offres,int id_fournisseurs, int id_panier_globals_details)
         {
             OFFRES = offres;
             ID_FOURNISSEURS = id_fournisseurs;
             ID_PANIER_GLOBALS_DETAILS = id_panier_globals_details;
         }
-        public Offres_Fournisseurs(int id, string offres, int id_fournisseurs, int id_panier_globals_details)
+        public Offres_Fournisseurs(int id, double offres, int id_fournisseurs, int id_panier_globals_details)
             : this(offres, id_fournisseurs, id_panier_globals_details)
         {
             ID = id;
