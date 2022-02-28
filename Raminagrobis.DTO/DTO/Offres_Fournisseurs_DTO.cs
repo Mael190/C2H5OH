@@ -14,8 +14,8 @@ namespace Raminagrobis.DTO
             get { return id_fournisseurs; }
              set { id_fournisseurs = value; }
         }
-        private string offres;
-        public string OFFRES
+        private double offres;
+        public double OFFRES
         {
             get { return offres; }
              set { offres = value; }

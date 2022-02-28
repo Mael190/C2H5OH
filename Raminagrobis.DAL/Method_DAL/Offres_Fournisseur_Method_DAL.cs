@@ -39,9 +39,9 @@ namespace Raminagrobis.DAL
             {
                 var offres_fournisseurTmp = new Offres_Fournisseurs_DAL(
                                         reader.GetInt32(0),
-                                        reader.GetString(1),
-                                        reader.GetInt32(3),
-                                        reader.GetInt32(4)
+                                        reader.GetDouble(1),
+                                        reader.GetInt32(2),
+                                        reader.GetInt32(3)
                                         );
 
                 listeOffres_Fournisseur.Add(offres_fournisseurTmp);
@@ -63,7 +63,7 @@ namespace Raminagrobis.DAL
             {
                 var offres_fournisseurs = new Offres_Fournisseurs_DAL(
                                         reader.GetInt32(0),
-                                        reader.GetString(1),
+                                        reader.GetDouble(1),
                                         reader.GetInt32(3),
                                         reader.GetInt32(4)
                                         );
@@ -79,10 +79,10 @@ namespace Raminagrobis.DAL
         {
             CreerConnexionEtCommande();
 
-            commande.CommandText = "insert into offres_fournisseurs(offres, id_fournisseurs, id_panier_globals_details)"
-                                    + " values (@offres, @id_fournisseurs,@id_panier_globals_details); select scope_identity()";
+            commande.CommandText = "insert into offres_fournisseurs(offre, id_fournisseurs, id_panier_global_details)"
+                                    + " values (@offre, @id_fournisseurs,@id_panier_globals_details); select scope_identity()";
 
-            commande.Parameters.Add(new SqlParameter("@offres", offres_fourni.OFFRES));
+            commande.Parameters.Add(new SqlParameter("@offre", offres_fourni.OFFRES));
             commande.Parameters.Add(new SqlParameter("@id_fournisseurs", offres_fourni.ID_FOURNISSEURS));
             commande.Parameters.Add(new SqlParameter("@id_panier_globals_details", offres_fourni.ID_PANIER_GLOBALS_DETAILS));
 

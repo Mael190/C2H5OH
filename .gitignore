@@ -4,8 +4,8 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 
-Raminagrobis/appsettings.json
-Raminagrobis.DAL/appsettings.json
+#Raminagrobis/appsettings.json
+#Raminagrobis.DAL/appsettings.json
 
 # User-specific files
 *.rsuser
