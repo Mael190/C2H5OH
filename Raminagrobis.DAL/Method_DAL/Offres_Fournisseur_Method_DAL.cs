@@ -67,12 +67,14 @@ namespace Raminagrobis.DAL
                                         reader.GetInt32(3),
                                         reader.GetInt32(4)
                                         );
+                DetruireConnexionEtCommande();
                 return offres_fournisseurs;
             }
             else
-                throw new Exception($"Pas de point dans la BDD avec l'ID {ID}");
+                DetruireConnexionEtCommande();
+            throw new Exception($"Pas de point dans la BDD avec l'ID {ID}");
 
-            DetruireConnexionEtCommande();
+            
         }
 
         public override Offres_Fournisseurs_DAL Insert(Offres_Fournisseurs_DAL offres_fourni)

@@ -149,7 +149,7 @@ namespace Raminagrobis1.WPF
             
             try
             {
-                StreamWriter sw = new StreamWriter("C:\\Users\\rgdma\\Desktop\\panierGlobal.csv");
+                StreamWriter sw = new StreamWriter("C:\\Users\\rgdma\\Desktop\\C2H5OH\\panierGlobal.csv");
                 sw.Write("reference;quantite;prix unitaire HT\n");
 
                 for (var i = 0; i < tmp.Count; i++)
@@ -182,7 +182,7 @@ namespace Raminagrobis1.WPF
 
             try
             {
-                StreamWriter sw = new StreamWriter($"C:\\Users\\rgdma\\Desktop\\{fournisseur.Societe}_puht_vide.csv");
+                StreamWriter sw = new StreamWriter($"C:\\Users\\rgdma\\Desktop\\C2H5OH\\{fournisseur.Societe}_puht_vide.csv");
                 sw.Write("reference;quantite;prix unitaire HT\n");
 
                 foreach (Panier_Global_Details_DTO referencePanier in panierGlobalDetail)
@@ -255,7 +255,7 @@ namespace Raminagrobis1.WPF
 
             var listOffresFournisseurs = await clientApi.AllOffresFournisseursAsync();
 
-            StreamWriter sw = new StreamWriter("C:\\Users\\rgdma\\Desktop\\panierFinal.csv");
+            StreamWriter sw = new StreamWriter(@"C:\Users\rgdma\Desktop\C2H5OH\panierFinal.csv");
             sw.Write("reference;quantite;prix unitaire HT;fournisseur\n");
 
             foreach (Panier_Global_Details_DTO panierGlobalDetail in listPanierGlobalDetails)

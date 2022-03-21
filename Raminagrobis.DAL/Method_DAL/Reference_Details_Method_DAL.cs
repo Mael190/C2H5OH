@@ -101,12 +101,15 @@ namespace Raminagrobis.DAL
                                         reader.GetInt32(1),
                                         reader.GetInt32(2)
                                         );
+                DetruireConnexionEtCommande();
                 return fournisseur;
             }
             else
+            {
+                DetruireConnexionEtCommande();
                 throw new Exception($"Pas de point dans la BDD avec l'ID {ID}");
-
-            DetruireConnexionEtCommande();
+            }
+                
         }
 
         public override Reference_details_DAL Insert(Reference_details_DAL referenceDetail)
