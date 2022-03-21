@@ -67,12 +67,17 @@ namespace Raminagrobis.DAL
                                         reader.GetInt32(2),
                                         reader.GetInt32(1),
                                         reader.GetInt32(3));
+                DetruireConnexionEtCommande();
                 return panier_adherent_details;
             }
             else
+            {
+                DetruireConnexionEtCommande();
                 throw new Exception($"Pas de point dans la BDD avec l'ID {ID}");
+            }
+                
 
-            DetruireConnexionEtCommande();
+            
         }
 
         public override Panier_Adherent_Details_DAL Insert(Panier_Adherent_Details_DAL fourni)

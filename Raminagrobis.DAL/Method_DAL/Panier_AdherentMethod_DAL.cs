@@ -64,12 +64,15 @@ namespace Raminagrobis.DAL
                                         reader.GetInt32(0),
                                         reader.GetString(1),
                                         reader.GetInt32(2));
+                DetruireConnexionEtCommande();
                 return panier_Adherent;
             }
             else
+            {
+                DetruireConnexionEtCommande();
                 throw new Exception($"Pas de panier adhérent avec l'ID {ID}");
-
-            DetruireConnexionEtCommande();
+            }
+                
         }
 
         public override Panier_Adherent_DAL Insert(Panier_Adherent_DAL panierAdherent)

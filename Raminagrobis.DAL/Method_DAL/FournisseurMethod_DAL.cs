@@ -73,12 +73,15 @@ namespace Raminagrobis.DAL
                                         reader.GetString(5),
                                         reader.GetString(6),
                                         reader.GetBoolean(7));
+                DetruireConnexionEtCommande();
                 return fournisseur;
             }
             else
+            {
+                DetruireConnexionEtCommande();
                 throw new Exception($"Pas de point dans la BDD avec l'ID {ID}");
-
-            DetruireConnexionEtCommande();
+            }
+            
         }
 
         public override Fournisseur_DAL Insert(Fournisseur_DAL fourni)

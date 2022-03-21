@@ -75,13 +75,15 @@ namespace Raminagrobis.DAL
                                         reader.GetDateTime(7),
                                         reader.GetBoolean(8)
                                         );
+                DetruireConnexionEtCommande();
                 return adherent;
             }
             else
             {
+                DetruireConnexionEtCommande();
                 throw new Exception($"Impossible de récupérer l'adhérents avec l'(ID {ID}");
             }
-            DetruireConnexionEtCommande();
+            
         }
 
         public override Adherent_DAL Insert(Adherent_DAL adherent)

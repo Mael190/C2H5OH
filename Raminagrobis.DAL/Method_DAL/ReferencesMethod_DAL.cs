@@ -67,12 +67,14 @@ namespace Raminagrobis.DAL
                                         reader.GetString(2),
                                         reader.GetString(3)
                                         );
+                DetruireConnexionEtCommande();
                 return references;
             }
             else
+            {
+                DetruireConnexionEtCommande();
                 throw new Exception($"Pas de référence avec l'ID {ID}");
-
-            DetruireConnexionEtCommande();
+            }
         }
 
         public override Reference_DAL Insert(Reference_DAL reference)

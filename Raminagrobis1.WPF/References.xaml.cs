@@ -36,6 +36,7 @@ namespace Raminagrobis1.WPF
             var fournisseurs = await clientApi.AllFounrisseursAsync();
 
             listFournisseurs.ItemsSource = fournisseurs;
+            System.Diagnostics.Trace.WriteLine(fournisseurs.Count);
         }
 
         private async void btnOpenFile_Click(object sender, RoutedEventArgs e)
